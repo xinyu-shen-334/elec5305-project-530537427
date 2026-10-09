@@ -1,0 +1,6 @@
+SYNTHETIC SMOKE TEST (NOT HUMAN SPEECH OR ASR)
+Requested input SNR: 0.00 dB
+Measured input SNR: 0.00 dB
+Practical-estimate output SNR: 6.84 dB (change +6.84 dB)
+Oracle-estimate output SNR: 6.97 dB (change +6.97 dB)
+One synthetic/demo run, not a benchmark; no STOI/WER measured.

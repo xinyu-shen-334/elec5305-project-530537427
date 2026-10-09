@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELEC5305 | Speech Enhancement vs Speech Recognition</title><style>
+body{font:17px/1.65 system-ui,Arial,sans-serif;color:#19293c;background:#f5f8fb;margin:0} main{max-width:920px;margin:45px auto;padding:34px;background:white;border-radius:16px;box-shadow:0 8px 30px #142b4312}h1{font-size:32px;line-height:1.2}h2{border-bottom:1px solid #d6e0ea;padding-bottom:7px;margin-top:32px}a{color:#1765ad}small,.muted{color:#53677d}.tag{display:inline-block;background:#edf3fb;color:#285781;padding:5px 12px;border-radius:30px;font-weight:600}img{max-width:100%;border:1px solid #dce4eb;border-radius:8px}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){main{margin:0;padding:20px;border-radius:0}.gallery{grid-template-columns:1fr}}code{background:#f1f5f8;padding:2px 4px}
+</style></head><body><main>
+<span class="tag">ELEC5305 · Progress checkpoint · Preliminary</span>
+<h1>Speech Enhancement versus Speech Recognition</h1>
+<p class="muted">Evaluating STFT Wiener Filtering Under Noise | Xinyu Shen · SID 530537427</p>
+<h2>Research question</h2>
+<p>Does Wiener filtering that improves the numerical SNR of speech also improve its intelligibility and speech-recognition accuracy? How does imperfect noise-spectrum estimation affect this relationship?</p>
+<h2>Current implementation</h2>
+<p>A reproducible Python prototype includes controlled noise mixing, STFT, spectral noise PSD estimation, Wiener gains, inverse STFT, and visualisation. Two PSD modes are compared: practical (independent noise-only calibration) and oracle (exact added noise). <strong>Figures below are from a synthetic harmonic-signal test, not measured speech-recognition results.</strong></p>
+<div class="gallery"><div><img src="results/waveforms.png" alt="Four synthetic waveforms"><small>Clean, noisy, practical-enhanced and oracle-enhanced signals</small></div><div><img src="results/spectrograms.png" alt="Synthetic signal spectrogram comparisons"><small>Spectrogram comparisons (synthetic test)</small></div></div>
+<h2>Next steps</h2>
+<p>Use transcribed LibriSpeech and DEMAND noise at −5, 0, 5 and 10 dB. Evaluate SNR, STOI and the WER of a fixed pretrained Whisper model, then inspect cases where SNR and WER disagree. No training of Whisper is planned.</p>
+<h2>Code and documents</h2>
+<p><a href="https://github.com/xinyu-shen-334/elec5305-project-530537427">View GitHub repository and reproducibility instructions</a></p>
+<p><small>Status: first DSP demonstration complete; real-speech STOI and WER results have not been collected yet.</small></p>
+</main></body></html>
