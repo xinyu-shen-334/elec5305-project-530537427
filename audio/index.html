@@ -1,1 +1,147 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Audio comparisons</title><style>body{max-width:980px;margin:42px auto;padding:0 22px;font:17px/1.65 system-ui;color:#173b4d}h1{line-height:1.2}a{color:#096d85}img,video{max-width:100%;height:auto}section{margin:35px 0}audio{width:min(100%,650px)}table{border-collapse:collapse;width:100%}td,th{padding:8px;text-align:left;border-bottom:1px solid #cbd8df}code{background:#edf3f7;padding:3px}</style><h1>Fair audio comparisons</h1><p><a href="../index.html">Project home</a></p><p>All versions within an example share one gain. Examples are selected by ID, not by achieved improvement. A selected floor targets development WER, not listener preference.</p><section><h2>Example 1: F, traffic, 0 dB</h2><p>Reference: YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION</p><p><b>Sampler order: clean, noisy, baseline, selected (one-second gaps).</b></p><audio controls src="example_01_F_traffic_0dB/comparison.mp3"></audio><p>Clean reference<br><audio controls src="example_01_F_traffic_0dB/clean.wav"></audio></p><p>Noisy input<br><audio controls src="example_01_F_traffic_0dB/noisy.wav"></audio></p><p>Baseline floor 0.05<br><audio controls src="example_01_F_traffic_0dB/baseline.wav"></audio></p><p>Selected floor 0.35<br><audio controls src="example_01_F_traffic_0dB/selected.wav"></audio></p><p>Oracle PSD diagnostic<br><audio controls src="example_01_F_traffic_0dB/oracle.wav"></audio></p></section><section><h2>Example 2: F, cafeteria, 0 dB</h2><p>Reference: YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION</p><p><b>Sampler order: clean, noisy, baseline, selected (one-second gaps).</b></p><audio controls src="example_02_F_cafeteria_0dB/comparison.mp3"></audio><p>Clean reference<br><audio controls src="example_02_F_cafeteria_0dB/clean.wav"></audio></p><p>Noisy input<br><audio controls src="example_02_F_cafeteria_0dB/noisy.wav"></audio></p><p>Baseline floor 0.05<br><audio controls src="example_02_F_cafeteria_0dB/baseline.wav"></audio></p><p>Selected floor 0.35<br><audio controls src="example_02_F_cafeteria_0dB/selected.wav"></audio></p><p>Oracle PSD diagnostic<br><audio controls src="example_02_F_cafeteria_0dB/oracle.wav"></audio></p></section><section><h2>Example 3: M, traffic, 0 dB</h2><p>Reference: OUT IN THE WOODS STOOD A NICE LITTLE FIR TREE</p><p><b>Sampler order: clean, noisy, baseline, selected (one-second gaps).</b></p><audio controls src="example_03_M_traffic_0dB/comparison.mp3"></audio><p>Clean reference<br><audio controls src="example_03_M_traffic_0dB/clean.wav"></audio></p><p>Noisy input<br><audio controls src="example_03_M_traffic_0dB/noisy.wav"></audio></p><p>Baseline floor 0.05<br><audio controls src="example_03_M_traffic_0dB/baseline.wav"></audio></p><p>Selected floor 0.35<br><audio controls src="example_03_M_traffic_0dB/selected.wav"></audio></p><p>Oracle PSD diagnostic<br><audio controls src="example_03_M_traffic_0dB/oracle.wav"></audio></p></section><section><h2>Example 4: M, cafeteria, 0 dB</h2><p>Reference: OUT IN THE WOODS STOOD A NICE LITTLE FIR TREE</p><p><b>Sampler order: clean, noisy, baseline, selected (one-second gaps).</b></p><audio controls src="example_04_M_cafeteria_0dB/comparison.mp3"></audio><p>Clean reference<br><audio controls src="example_04_M_cafeteria_0dB/clean.wav"></audio></p><p>Noisy input<br><audio controls src="example_04_M_cafeteria_0dB/noisy.wav"></audio></p><p>Baseline floor 0.05<br><audio controls src="example_04_M_cafeteria_0dB/baseline.wav"></audio></p><p>Selected floor 0.35<br><audio controls src="example_04_M_cafeteria_0dB/selected.wav"></audio></p><p>Oracle PSD diagnostic<br><audio controls src="example_04_M_cafeteria_0dB/oracle.wav"></audio></p></section><p>Source speech: LibriSpeech (CC BY 4.0). Source noise: DEMAND (CC BY-SA 3.0). Mixtures/processed examples: CC BY-SA 3.0, with the described filtering changes.</p></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audio comparisons — ELEC5305</title>
+<style>
+body {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #193e50;
+  background: #fafcfd;
+}
+h1 { line-height: 1.2; }
+section {
+  margin: 32px 0;
+  padding: 24px;
+  background: white;
+  border: 1px solid #dce5ea;
+  border-radius: 12px;
+}
+audio { width: 100%; margin: 6px 0 18px; }
+a { color: #007a96; }
+label { display: block; font-weight: bold; }
+.note { color: #526773; }
+</style>
+</head>
+<body>
+<h1>Fair audio comparisons</h1>
+<p><a href="../">Project home</a></p>
+<p>
+All versions within each example share the same gain.
+Examples were selected by ID, not by achieved improvement.
+The selected floor targets development WER, not listener preference.
+</p>
+<p class="note">
+Comparison order: clean → noisy → baseline → selected,
+with one-second gaps. Please keep your listening volume fixed.
+The oracle uses actual noise information and is a diagnostic reference.
+</p>
+
+<main id="examples"></main>
+
+<script>
+const examples = [
+  {
+    folder: "example_01_F_traffic_0dB",
+    title: "Example 1: Female speech, traffic, 0 dB",
+    files: [
+      ["comparison.mp3", "comparison.wav",
+       "comparison(1).wav", "comparison (1).wav"],
+      ["clean.wav", "clean(1).wav", "clean (1).wav"],
+      ["noisy.wav"],
+      ["baseline.wav"],
+      ["selected.wav"],
+      ["oracle.wav"]
+    ]
+  },
+  {
+    folder: "example_02_F_cafeteria_0dB",
+    title: "Example 2: Female speech, cafeteria, 0 dB",
+    files: [
+      ["comparison(2).mp3"],
+      ["clean (1).wav"],
+      ["noisy(1).wav"],
+      ["baseline(2).wav"],
+      ["selected(1).wav"],
+      ["oracle(1).wav"]
+    ]
+  },
+  {
+    folder: "example_03_M_traffic_0dB",
+    title: "Example 3: Male speech, traffic, 0 dB",
+    files: [
+      ["comparison(1).mp3"],
+      ["clean(20261113-003304).wav"],
+      ["noisy(2).wav"],
+      ["baseline(1).wav"],
+      ["selected(2).wav"],
+      ["oracle(2).wav"]
+    ]
+  },
+  {
+    folder: "example_04_M_cafeteria_0dB",
+    title: "Example 4: Male speech, cafeteria, 0 dB",
+    files: [
+      ["comparison(3).mp3"],
+      ["clean(2).wav"],
+      ["noisy(20261113-003311).wav"],
+      ["baseline(3).wav"],
+      ["selected(20261113-003311).wav"],
+      ["oracle(3).wav"]
+    ]
+  }
+];
+
+const labels = [
+  "Comparison: clean → noisy → baseline → selected",
+  "Clean reference",
+  "Noisy input",
+  "Baseline Wiener filter — floor 0.05",
+  "Selected Wiener filter — floor 0.35",
+  "Oracle noise PSD — diagnostic reference"
+];
+
+const container = document.getElementById("examples");
+
+examples.forEach(example => {
+  const section = document.createElement("section");
+  const heading = document.createElement("h2");
+  heading.textContent = example.title;
+  section.appendChild(heading);
+
+  example.files.forEach((names, index) => {
+    const label = document.createElement("label");
+    label.textContent = labels[index];
+
+    const player = document.createElement("audio");
+    player.controls = true;
+    player.preload = "metadata";
+
+    names.forEach(name => {
+      const source = document.createElement("source");
+      source.src = example.folder + "/" + encodeURIComponent(name);
+      source.type = name.endsWith(".mp3")
+        ? "audio/mpeg" : "audio/wav";
+      player.appendChild(source);
+    });
+
+    player.addEventListener("play", () => {
+      document.querySelectorAll("audio").forEach(other => {
+        if (other !== player) other.pause();
+      });
+    });
+
+    section.appendChild(label);
+    section.appendChild(player);
+  });
+
+  container.appendChild(section);
+});
+</script>
+</body>
+</html>
