@@ -1,0 +1,14 @@
+AUDIO LISTENING GUIDE
+
+Examples were selected by first test ID within sex, not by achieved improvement.
+Each example has traffic or cafeteria noise at 0 dB.
+comparison.wav / comparison.mp3 play CLEAN -> NOISY -> BASELINE -> SELECTED,
+with one second silence after each. All versions share one export gain.
+Do not compare independently normalised volumes: there is no such normalisation here.
+The oracle output is a diagnostic and is excluded from the main listening sequence.
+The selected output is tuned for development WER, not listener preference.
+Noise reduction may improve SNR without improving every spoken word.
+
+Data: LibriSpeech CC BY 4.0; DEMAND CC BY-SA 3.0.
+Audio mixtures and derived enhanced examples are supplied under CC BY-SA 3.0,
+with both source attributions and the processing changes described in the report.

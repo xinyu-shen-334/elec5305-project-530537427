@@ -1,0 +1,74 @@
+[
+  {
+    "example": 1,
+    "id": "1221-135766-0002",
+    "sex": "F",
+    "noise": "traffic",
+    "input_snr": 0,
+    "transcript": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+    "selected_floor": 0.35,
+    "common_export_gain": 3.004296326077495,
+    "folder": "audio/example_01_F_traffic_0dB",
+    "sequence": [
+      "clean",
+      "noisy",
+      "baseline",
+      "selected"
+    ],
+    "separator_seconds": 1
+  },
+  {
+    "example": 2,
+    "id": "1221-135766-0002",
+    "sex": "F",
+    "noise": "cafeteria",
+    "input_snr": 0,
+    "transcript": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+    "selected_floor": 0.35,
+    "common_export_gain": 2.9747331461083197,
+    "folder": "audio/example_02_F_cafeteria_0dB",
+    "sequence": [
+      "clean",
+      "noisy",
+      "baseline",
+      "selected"
+    ],
+    "separator_seconds": 1
+  },
+  {
+    "example": 3,
+    "id": "672-122797-0000",
+    "sex": "M",
+    "noise": "traffic",
+    "input_snr": 0,
+    "transcript": "OUT IN THE WOODS STOOD A NICE LITTLE FIR TREE",
+    "selected_floor": 0.35,
+    "common_export_gain": 1.1405940594059407,
+    "folder": "audio/example_03_M_traffic_0dB",
+    "sequence": [
+      "clean",
+      "noisy",
+      "baseline",
+      "selected"
+    ],
+    "separator_seconds": 1
+  },
+  {
+    "example": 4,
+    "id": "672-122797-0000",
+    "sex": "M",
+    "noise": "cafeteria",
+    "input_snr": 0,
+    "transcript": "OUT IN THE WOODS STOOD A NICE LITTLE FIR TREE",
+    "selected_floor": 0.35,
+    "common_export_gain": 0.979741872506149,
+    "folder": "audio/example_04_M_cafeteria_0dB",
+    "sequence": [
+      "clean",
+      "noisy",
+      "baseline",
+      "selected"
+    ],
+    "separator_seconds": 1
+  }
+]
