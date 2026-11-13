@@ -1,0 +1,27 @@
+{
+  "scores": {
+    "0.05": {
+      "wer": 31.010928961748633,
+      "errors": 227,
+      "nwords": 732
+    },
+    "0.1": {
+      "wer": 31.693989071038253,
+      "errors": 232,
+      "nwords": 732
+    },
+    "0.2": {
+      "wer": 31.147540983606557,
+      "errors": 228,
+      "nwords": 732
+    },
+    "0.35": {
+      "wer": 27.3224043715847,
+      "errors": 200,
+      "nwords": 732
+    }
+  },
+  "selected_floor": 0.35,
+  "criterion": "minimum development corpus WER, ties select smaller floor",
+  "test_data_used": false
+}

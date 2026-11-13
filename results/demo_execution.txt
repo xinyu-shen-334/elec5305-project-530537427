@@ -1,0 +1,12 @@
+[1794521998.730228] [d11054a32395:6    :f]        vfs_fuse.c:413  UCX  ERROR failed to create VFS socket: Operation not permitted
+STFT Wiener DSP demonstration | 16000 Hz | 512 FFT | hop 128
+Utterance: 1221-135766-0002 | traffic noise | target 0 dB
+Reference: YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION
+Independent calibration: preceding 1-second noise-only interval
+Method        Output SNR (dB)       STOI
+noisy              0.000           0.880
+baseline           6.047           0.900
+selected           5.124           0.899
+Selected gain floor: 0.35
+Saved four WAV files in demo_output/ using one common export gain
+DSP and export completed in 0.265 seconds

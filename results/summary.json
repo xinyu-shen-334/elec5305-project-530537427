@@ -1,0 +1,1225 @@
+{
+  "overall": {
+    "noisy": {
+      "snr": 2.499999994540688,
+      "stoi": 0.7944895545498434,
+      "wer": 28.2791817087846,
+      "errors": 940,
+      "nwords": 3324,
+      "substitutions": 676,
+      "deletions": 139,
+      "insertions": 125,
+      "n": 240,
+      "utterance_wer_median": 16.666666666666668,
+      "over100": 7
+    },
+    "baseline": {
+      "snr": 7.237683231969762,
+      "stoi": 0.7984368867015975,
+      "wer": 29.90373044524669,
+      "errors": 994,
+      "nwords": 3324,
+      "substitutions": 710,
+      "deletions": 152,
+      "insertions": 132,
+      "n": 240,
+      "utterance_wer_median": 22.22222222222222,
+      "over100": 9
+    },
+    "selected": {
+      "snr": 6.561731611179884,
+      "stoi": 0.8018572574375055,
+      "wer": 25.150421179302047,
+      "errors": 836,
+      "nwords": 3324,
+      "substitutions": 579,
+      "deletions": 171,
+      "insertions": 86,
+      "n": 240,
+      "utterance_wer_median": 17.708333333333336,
+      "over100": 4
+    },
+    "oracle": {
+      "snr": 7.444420003258594,
+      "stoi": 0.8002850242583119,
+      "wer": 30.385078219013238,
+      "errors": 1010,
+      "nwords": 3324,
+      "substitutions": 729,
+      "deletions": 122,
+      "insertions": 159,
+      "n": 240,
+      "utterance_wer_median": 22.22222222222222,
+      "over100": 11
+    },
+    "clean": {
+      "snr": 94.51198526594466,
+      "stoi": 1.0,
+      "wer": 5.776173285198556,
+      "errors": 16,
+      "nwords": 277,
+      "substitutions": 12,
+      "deletions": 2,
+      "insertions": 2,
+      "n": 20,
+      "utterance_wer_median": 1.9230769230769231,
+      "over100": 0
+    }
+  },
+  "by_snr": {
+    "-5": {
+      "noisy": {
+        "snr": -4.9999999985536325,
+        "stoi": 0.6616605626344761,
+        "wer": 59.687123947051745,
+        "errors": 496,
+        "nwords": 831,
+        "substitutions": 343,
+        "deletions": 88,
+        "insertions": 65,
+        "n": 60,
+        "utterance_wer_median": 62.019230769230774,
+        "over100": 4
+      },
+      "baseline": {
+        "snr": 0.31798742710787997,
+        "stoi": 0.6572991952868822,
+        "wer": 64.86161251504211,
+        "errors": 539,
+        "nwords": 831,
+        "substitutions": 365,
+        "deletions": 88,
+        "insertions": 86,
+        "n": 60,
+        "utterance_wer_median": 61.32478632478633,
+        "over100": 8
+      },
+      "selected": {
+        "snr": -0.5340093648684973,
+        "stoi": 0.6658261208664558,
+        "wer": 52.58724428399518,
+        "errors": 437,
+        "nwords": 831,
+        "substitutions": 281,
+        "deletions": 112,
+        "insertions": 44,
+        "n": 60,
+        "utterance_wer_median": 47.72727272727273,
+        "over100": 3
+      },
+      "oracle": {
+        "snr": 0.45555061830871085,
+        "stoi": 0.6593226597052628,
+        "wer": 65.22262334536703,
+        "errors": 542,
+        "nwords": 831,
+        "substitutions": 376,
+        "deletions": 61,
+        "insertions": 105,
+        "n": 60,
+        "utterance_wer_median": 61.32478632478633,
+        "over100": 8
+      }
+    },
+    "0": {
+      "noisy": {
+        "snr": -5.62524355489418e-17,
+        "stoi": 0.7595237345942747,
+        "wer": 30.56558363417569,
+        "errors": 254,
+        "nwords": 831,
+        "substitutions": 182,
+        "deletions": 29,
+        "insertions": 43,
+        "n": 60,
+        "utterance_wer_median": 24.404761904761905,
+        "over100": 3
+      },
+      "baseline": {
+        "snr": 5.027517926883457,
+        "stoi": 0.7649421424062061,
+        "wer": 30.685920577617328,
+        "errors": 255,
+        "nwords": 831,
+        "substitutions": 190,
+        "deletions": 37,
+        "insertions": 28,
+        "n": 60,
+        "utterance_wer_median": 27.22222222222222,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 4.302325875578817,
+        "stoi": 0.7686794721721972,
+        "wer": 26.71480144404332,
+        "errors": 222,
+        "nwords": 831,
+        "substitutions": 160,
+        "deletions": 34,
+        "insertions": 28,
+        "n": 60,
+        "utterance_wer_median": 22.252747252747252,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 5.335454021622047,
+        "stoi": 0.7678648959387389,
+        "wer": 30.32490974729242,
+        "errors": 252,
+        "nwords": 831,
+        "substitutions": 191,
+        "deletions": 26,
+        "insertions": 35,
+        "n": 60,
+        "utterance_wer_median": 28.88888888888889,
+        "over100": 1
+      }
+    },
+    "5": {
+      "noisy": {
+        "snr": 4.999999995489661,
+        "stoi": 0.8496807314447622,
+        "wer": 13.477737665463298,
+        "errors": 112,
+        "nwords": 831,
+        "substitutions": 89,
+        "deletions": 9,
+        "insertions": 14,
+        "n": 60,
+        "utterance_wer_median": 12.5,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 9.493103004737202,
+        "stoi": 0.8578995531010382,
+        "wer": 15.52346570397112,
+        "errors": 129,
+        "nwords": 831,
+        "substitutions": 99,
+        "deletions": 14,
+        "insertions": 16,
+        "n": 60,
+        "utterance_wer_median": 13.80952380952381,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 8.89122568043129,
+        "stoi": 0.8588903628870017,
+        "wer": 13.237063778580024,
+        "errors": 110,
+        "nwords": 831,
+        "substitutions": 87,
+        "deletions": 13,
+        "insertions": 10,
+        "n": 60,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 1
+      },
+      "oracle": {
+        "snr": 9.823670844716938,
+        "stoi": 0.8595447526871561,
+        "wer": 16.967509025270758,
+        "errors": 141,
+        "nwords": 831,
+        "substitutions": 101,
+        "deletions": 24,
+        "insertions": 16,
+        "n": 60,
+        "utterance_wer_median": 14.285714285714286,
+        "over100": 2
+      }
+    },
+    "10": {
+      "noisy": {
+        "snr": 9.999999981226722,
+        "stoi": 0.9070931895258602,
+        "wer": 9.386281588447654,
+        "errors": 78,
+        "nwords": 831,
+        "substitutions": 62,
+        "deletions": 13,
+        "insertions": 3,
+        "n": 60,
+        "utterance_wer_median": 5.158730158730158,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 14.112124569150508,
+        "stoi": 0.9136066560122633,
+        "wer": 8.543922984356197,
+        "errors": 71,
+        "nwords": 831,
+        "substitutions": 56,
+        "deletions": 13,
+        "insertions": 2,
+        "n": 60,
+        "utterance_wer_median": 0.0,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 13.587384253577925,
+        "stoi": 0.9140330738243669,
+        "wer": 8.062575210589651,
+        "errors": 67,
+        "nwords": 831,
+        "substitutions": 51,
+        "deletions": 12,
+        "insertions": 4,
+        "n": 60,
+        "utterance_wer_median": 0.0,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 14.163004528386681,
+        "stoi": 0.9144077887020904,
+        "wer": 9.025270758122744,
+        "errors": 75,
+        "nwords": 831,
+        "substitutions": 61,
+        "deletions": 11,
+        "insertions": 3,
+        "n": 60,
+        "utterance_wer_median": 0.0,
+        "over100": 0
+      }
+    }
+  },
+  "by_noise": {
+    "white": {
+      "noisy": {
+        "snr": 2.4999999945359526,
+        "stoi": 0.7507711824789257,
+        "wer": 43.14079422382672,
+        "errors": 478,
+        "nwords": 1108,
+        "substitutions": 354,
+        "deletions": 50,
+        "insertions": 74,
+        "n": 80,
+        "utterance_wer_median": 32.05128205128205,
+        "over100": 5
+      },
+      "baseline": {
+        "snr": 8.35810916803228,
+        "stoi": 0.7633971116972059,
+        "wer": 39.44043321299639,
+        "errors": 437,
+        "nwords": 1108,
+        "substitutions": 337,
+        "deletions": 40,
+        "insertions": 60,
+        "n": 80,
+        "utterance_wer_median": 33.333333333333336,
+        "over100": 6
+      },
+      "selected": {
+        "snr": 7.44392719748908,
+        "stoi": 0.7661303816582368,
+        "wer": 32.12996389891697,
+        "errors": 356,
+        "nwords": 1108,
+        "substitutions": 270,
+        "deletions": 40,
+        "insertions": 46,
+        "n": 80,
+        "utterance_wer_median": 25.0,
+        "over100": 3
+      },
+      "oracle": {
+        "snr": 8.444139010994899,
+        "stoi": 0.763842885561715,
+        "wer": 40.43321299638989,
+        "errors": 448,
+        "nwords": 1108,
+        "substitutions": 337,
+        "deletions": 39,
+        "insertions": 72,
+        "n": 80,
+        "utterance_wer_median": 33.333333333333336,
+        "over100": 6
+      }
+    },
+    "traffic": {
+      "noisy": {
+        "snr": 2.499999994537432,
+        "stoi": 0.8605380462044672,
+        "wer": 12.364620938628159,
+        "errors": 137,
+        "nwords": 1108,
+        "substitutions": 107,
+        "deletions": 15,
+        "insertions": 15,
+        "n": 80,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 1
+      },
+      "baseline": {
+        "snr": 7.63995707244739,
+        "stoi": 0.869188689672838,
+        "wer": 15.16245487364621,
+        "errors": 168,
+        "nwords": 1108,
+        "substitutions": 132,
+        "deletions": 17,
+        "insertions": 19,
+        "n": 80,
+        "utterance_wer_median": 11.011904761904763,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 6.841948982639804,
+        "stoi": 0.8703515812345796,
+        "wer": 13.35740072202166,
+        "errors": 148,
+        "nwords": 1108,
+        "substitutions": 114,
+        "deletions": 21,
+        "insertions": 13,
+        "n": 80,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 1
+      },
+      "oracle": {
+        "snr": 7.75375455491894,
+        "stoi": 0.8731043401676505,
+        "wer": 14.620938628158845,
+        "errors": 162,
+        "nwords": 1108,
+        "substitutions": 127,
+        "deletions": 16,
+        "insertions": 19,
+        "n": 80,
+        "utterance_wer_median": 9.307359307359308,
+        "over100": 1
+      }
+    },
+    "cafeteria": {
+      "noisy": {
+        "snr": 2.4999999945486784,
+        "stoi": 0.7721594349661374,
+        "wer": 29.332129963898918,
+        "errors": 325,
+        "nwords": 1108,
+        "substitutions": 215,
+        "deletions": 74,
+        "insertions": 36,
+        "n": 80,
+        "utterance_wer_median": 18.465909090909093,
+        "over100": 1
+      },
+      "baseline": {
+        "snr": 5.714983455429615,
+        "stoi": 0.7627248587347483,
+        "wer": 35.108303249097474,
+        "errors": 389,
+        "nwords": 1108,
+        "substitutions": 241,
+        "deletions": 95,
+        "insertions": 53,
+        "n": 80,
+        "utterance_wer_median": 27.22222222222222,
+        "over100": 2
+      },
+      "selected": {
+        "snr": 5.399318653410771,
+        "stoi": 0.7690898094196996,
+        "wer": 29.96389891696751,
+        "errors": 332,
+        "nwords": 1108,
+        "substitutions": 195,
+        "deletions": 110,
+        "insertions": 27,
+        "n": 80,
+        "utterance_wer_median": 21.825396825396822,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 6.135366443861942,
+        "stoi": 0.7639078470455706,
+        "wer": 36.101083032490976,
+        "errors": 400,
+        "nwords": 1108,
+        "substitutions": 265,
+        "deletions": 67,
+        "insertions": 68,
+        "n": 80,
+        "utterance_wer_median": 25.833333333333336,
+        "over100": 4
+      }
+    }
+  },
+  "paired": {
+    "baseline": {
+      "n": 240,
+      "snr_up": 240,
+      "stoi_up": 176,
+      "wer_down": 57,
+      "wer_up": 69,
+      "wer_ties": 114,
+      "snr_up_wer_worse": 69,
+      "snr_up_stoi_down": 64,
+      "rho_snr_wer": -0.1273905115873767,
+      "rho_stoi_wer": -0.0823301451338073,
+      "ci": {
+        "snr": [
+          4.565924426749217,
+          4.924097394816981
+        ],
+        "stoi": [
+          0.0008365609679754424,
+          0.007429982495590328
+        ],
+        "wer": [
+          -0.03753753753753754,
+          2.998882318078747
+        ]
+      },
+      "wer_delta": 1.6245487364620939,
+      "speakers_wer_better": 2,
+      "sensitivity": {
+        "removed_id": "1188-133604-0010",
+        "noise": "cafeteria",
+        "snr": -5.0,
+        "delta_without_largest": 1.087941976427924
+      }
+    },
+    "selected": {
+      "n": 240,
+      "snr_up": 240,
+      "stoi_up": 195,
+      "wer_down": 69,
+      "wer_up": 41,
+      "wer_ties": 130,
+      "snr_up_wer_worse": 41,
+      "snr_up_stoi_down": 45,
+      "rho_snr_wer": -0.22914229037163844,
+      "rho_stoi_wer": -0.11195101307849378,
+      "ci": {
+        "snr": [
+          3.940406618131719,
+          4.193969900120284
+        ],
+        "stoi": [
+          0.005166808808853449,
+          0.009840943387945176
+        ],
+        "wer": [
+          -5.012484745910451,
+          -1.4950688608776843
+        ]
+      },
+      "wer_delta": -3.1287605294825513,
+      "speakers_wer_better": 9,
+      "sensitivity": {
+        "removed_id": "1221-135766-0004",
+        "noise": "cafeteria",
+        "snr": -5.0,
+        "delta_without_largest": -3.3575317604355717
+      }
+    },
+    "oracle": {
+      "n": 240,
+      "snr_up": 240,
+      "stoi_up": 184,
+      "wer_down": 48,
+      "wer_up": 78,
+      "wer_ties": 114,
+      "snr_up_wer_worse": 78,
+      "snr_up_stoi_down": 56,
+      "rho_snr_wer": -0.09867939070756879,
+      "rho_stoi_wer": -0.13625441164049712,
+      "ci": {
+        "snr": [
+          4.82896124247501,
+          5.093654309390807
+        ],
+        "stoi": [
+          0.0021746632413478565,
+          0.009861073742842775
+        ],
+        "wer": [
+          0.20522983007607873,
+          3.67188603460452
+        ]
+      },
+      "wer_delta": 2.10589651022864,
+      "speakers_wer_better": 3,
+      "sensitivity": {
+        "removed_id": "1188-133604-0010",
+        "noise": "cafeteria",
+        "snr": -5.0,
+        "delta_without_largest": 1.6923541855545483
+      }
+    }
+  },
+  "by_speaker": {
+    "672": {
+      "noisy": {
+        "snr": 2.499999993376289,
+        "stoi": 0.7899285374438634,
+        "wer": 27.38095238095238,
+        "errors": 69,
+        "nwords": 252,
+        "substitutions": 50,
+        "deletions": 15,
+        "insertions": 4,
+        "n": 24,
+        "utterance_wer_median": 30.0,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 6.8180548412007695,
+        "stoi": 0.7923788280027352,
+        "wer": 28.96825396825397,
+        "errors": 73,
+        "nwords": 252,
+        "substitutions": 55,
+        "deletions": 8,
+        "insertions": 10,
+        "n": 24,
+        "utterance_wer_median": 30.0,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 6.29265892698077,
+        "stoi": 0.7948825864856426,
+        "wer": 24.603174603174605,
+        "errors": 62,
+        "nwords": 252,
+        "substitutions": 45,
+        "deletions": 15,
+        "insertions": 2,
+        "n": 24,
+        "utterance_wer_median": 30.0,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.391516588937087,
+        "stoi": 0.7931079405986319,
+        "wer": 27.77777777777778,
+        "errors": 70,
+        "nwords": 252,
+        "substitutions": 56,
+        "deletions": 8,
+        "insertions": 6,
+        "n": 24,
+        "utterance_wer_median": 30.0,
+        "over100": 0
+      }
+    },
+    "908": {
+      "noisy": {
+        "snr": 2.4999999978767193,
+        "stoi": 0.7870534305060017,
+        "wer": 30.416666666666668,
+        "errors": 73,
+        "nwords": 240,
+        "substitutions": 45,
+        "deletions": 24,
+        "insertions": 4,
+        "n": 24,
+        "utterance_wer_median": 23.076923076923077,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 7.271571556375961,
+        "stoi": 0.7903278270695818,
+        "wer": 31.666666666666668,
+        "errors": 76,
+        "nwords": 240,
+        "substitutions": 46,
+        "deletions": 29,
+        "insertions": 1,
+        "n": 24,
+        "utterance_wer_median": 23.076923076923077,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 6.563858218185022,
+        "stoi": 0.7935817602256366,
+        "wer": 26.666666666666668,
+        "errors": 64,
+        "nwords": 240,
+        "substitutions": 38,
+        "deletions": 26,
+        "insertions": 0,
+        "n": 24,
+        "utterance_wer_median": 23.076923076923077,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.467819158473233,
+        "stoi": 0.7922895142087075,
+        "wer": 33.333333333333336,
+        "errors": 80,
+        "nwords": 240,
+        "substitutions": 51,
+        "deletions": 26,
+        "insertions": 3,
+        "n": 24,
+        "utterance_wer_median": 25.824175824175825,
+        "over100": 0
+      }
+    },
+    "1089": {
+      "noisy": {
+        "snr": 2.4999999900278915,
+        "stoi": 0.8327179610912762,
+        "wer": 25.96153846153846,
+        "errors": 81,
+        "nwords": 312,
+        "substitutions": 55,
+        "deletions": 14,
+        "insertions": 12,
+        "n": 24,
+        "utterance_wer_median": 22.22222222222222,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 7.293451962506005,
+        "stoi": 0.8351502015173121,
+        "wer": 31.08974358974359,
+        "errors": 97,
+        "nwords": 312,
+        "substitutions": 69,
+        "deletions": 15,
+        "insertions": 13,
+        "n": 24,
+        "utterance_wer_median": 35.41666666666667,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 6.657413195749911,
+        "stoi": 0.8386806271258033,
+        "wer": 23.076923076923077,
+        "errors": 72,
+        "nwords": 312,
+        "substitutions": 52,
+        "deletions": 13,
+        "insertions": 7,
+        "n": 24,
+        "utterance_wer_median": 26.38888888888889,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.158736923561238,
+        "stoi": 0.8369509659846196,
+        "wer": 28.846153846153847,
+        "errors": 90,
+        "nwords": 312,
+        "substitutions": 64,
+        "deletions": 18,
+        "insertions": 8,
+        "n": 24,
+        "utterance_wer_median": 30.555555555555557,
+        "over100": 1
+      }
+    },
+    "1188": {
+      "noisy": {
+        "snr": 2.4999999933586854,
+        "stoi": 0.7581964590261769,
+        "wer": 29.347826086956523,
+        "errors": 81,
+        "nwords": 276,
+        "substitutions": 56,
+        "deletions": 10,
+        "insertions": 15,
+        "n": 24,
+        "utterance_wer_median": 16.666666666666668,
+        "over100": 1
+      },
+      "baseline": {
+        "snr": 7.34224547856379,
+        "stoi": 0.7549377838983348,
+        "wer": 33.69565217391305,
+        "errors": 93,
+        "nwords": 276,
+        "substitutions": 50,
+        "deletions": 14,
+        "insertions": 29,
+        "n": 24,
+        "utterance_wer_median": 16.666666666666668,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 6.65697720427909,
+        "stoi": 0.7606834372580885,
+        "wer": 23.91304347826087,
+        "errors": 66,
+        "nwords": 276,
+        "substitutions": 40,
+        "deletions": 24,
+        "insertions": 2,
+        "n": 24,
+        "utterance_wer_median": 16.666666666666668,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.4037101560350065,
+        "stoi": 0.75666214570043,
+        "wer": 34.78260869565217,
+        "errors": 96,
+        "nwords": 276,
+        "substitutions": 58,
+        "deletions": 13,
+        "insertions": 25,
+        "n": 24,
+        "utterance_wer_median": 22.5,
+        "over100": 1
+      }
+    },
+    "1221": {
+      "noisy": {
+        "snr": 2.499999990611038,
+        "stoi": 0.8047615179967259,
+        "wer": 16.666666666666668,
+        "errors": 58,
+        "nwords": 348,
+        "substitutions": 48,
+        "deletions": 2,
+        "insertions": 8,
+        "n": 24,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 6.897011628085607,
+        "stoi": 0.8205365215077883,
+        "wer": 15.517241379310345,
+        "errors": 54,
+        "nwords": 348,
+        "substitutions": 41,
+        "deletions": 6,
+        "insertions": 7,
+        "n": 24,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 6.354333441865966,
+        "stoi": 0.8202319144320428,
+        "wer": 17.816091954022987,
+        "errors": 62,
+        "nwords": 348,
+        "substitutions": 42,
+        "deletions": 3,
+        "insertions": 17,
+        "n": 24,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.268891435353486,
+        "stoi": 0.8230035703153994,
+        "wer": 19.25287356321839,
+        "errors": 67,
+        "nwords": 348,
+        "substitutions": 50,
+        "deletions": 1,
+        "insertions": 16,
+        "n": 24,
+        "utterance_wer_median": 9.090909090909092,
+        "over100": 0
+      }
+    },
+    "1284": {
+      "noisy": {
+        "snr": 2.499999997380664,
+        "stoi": 0.8114424540865491,
+        "wer": 29.609929078014183,
+        "errors": 167,
+        "nwords": 564,
+        "substitutions": 139,
+        "deletions": 15,
+        "insertions": 13,
+        "n": 24,
+        "utterance_wer_median": 19.047619047619047,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 7.373835894163613,
+        "stoi": 0.8175656873545784,
+        "wer": 32.801418439716315,
+        "errors": 185,
+        "nwords": 564,
+        "substitutions": 156,
+        "deletions": 18,
+        "insertions": 11,
+        "n": 24,
+        "utterance_wer_median": 21.153846153846153,
+        "over100": 1
+      },
+      "selected": {
+        "snr": 6.586704609194043,
+        "stoi": 0.8205996968332462,
+        "wer": 29.25531914893617,
+        "errors": 165,
+        "nwords": 564,
+        "substitutions": 134,
+        "deletions": 20,
+        "insertions": 11,
+        "n": 24,
+        "utterance_wer_median": 19.13919413919414,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.528226960342405,
+        "stoi": 0.8182972728055081,
+        "wer": 34.39716312056738,
+        "errors": 194,
+        "nwords": 564,
+        "substitutions": 169,
+        "deletions": 4,
+        "insertions": 21,
+        "n": 24,
+        "utterance_wer_median": 23.076923076923077,
+        "over100": 2
+      }
+    },
+    "1320": {
+      "noisy": {
+        "snr": 2.4999999988131894,
+        "stoi": 0.796247736464596,
+        "wer": 35.85858585858586,
+        "errors": 142,
+        "nwords": 396,
+        "substitutions": 89,
+        "deletions": 20,
+        "insertions": 33,
+        "n": 24,
+        "utterance_wer_median": 16.666666666666668,
+        "over100": 2
+      },
+      "baseline": {
+        "snr": 7.542865989145185,
+        "stoi": 0.794476370020813,
+        "wer": 37.62626262626262,
+        "errors": 149,
+        "nwords": 396,
+        "substitutions": 105,
+        "deletions": 3,
+        "insertions": 41,
+        "n": 24,
+        "utterance_wer_median": 26.666666666666668,
+        "over100": 2
+      },
+      "selected": {
+        "snr": 6.80225899835986,
+        "stoi": 0.8004974189615512,
+        "wer": 28.535353535353536,
+        "errors": 113,
+        "nwords": 396,
+        "substitutions": 73,
+        "deletions": 18,
+        "insertions": 22,
+        "n": 24,
+        "utterance_wer_median": 16.666666666666668,
+        "over100": 1
+      },
+      "oracle": {
+        "snr": 7.439086047742443,
+        "stoi": 0.7944783501783856,
+        "wer": 40.4040404040404,
+        "errors": 160,
+        "nwords": 396,
+        "substitutions": 102,
+        "deletions": 10,
+        "insertions": 48,
+        "n": 24,
+        "utterance_wer_median": 26.666666666666668,
+        "over100": 3
+      }
+    },
+    "1580": {
+      "noisy": {
+        "snr": 2.4999999895061893,
+        "stoi": 0.8108620524690339,
+        "wer": 15.364583333333334,
+        "errors": 59,
+        "nwords": 384,
+        "substitutions": 47,
+        "deletions": 5,
+        "insertions": 7,
+        "n": 24,
+        "utterance_wer_median": 14.285714285714286,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 7.168585495163484,
+        "stoi": 0.820423799391126,
+        "wer": 15.885416666666666,
+        "errors": 61,
+        "nwords": 384,
+        "substitutions": 52,
+        "deletions": 5,
+        "insertions": 4,
+        "n": 24,
+        "utterance_wer_median": 14.285714285714286,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 6.444035423375191,
+        "stoi": 0.8229373919786337,
+        "wer": 10.9375,
+        "errors": 42,
+        "nwords": 384,
+        "substitutions": 30,
+        "deletions": 7,
+        "insertions": 5,
+        "n": 24,
+        "utterance_wer_median": 14.285714285714286,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.46877102085141,
+        "stoi": 0.8258522882549061,
+        "wer": 14.322916666666666,
+        "errors": 55,
+        "nwords": 384,
+        "substitutions": 43,
+        "deletions": 7,
+        "insertions": 5,
+        "n": 24,
+        "utterance_wer_median": 14.285714285714286,
+        "over100": 0
+      }
+    },
+    "1995": {
+      "noisy": {
+        "snr": 2.499999996506942,
+        "stoi": 0.759827279536041,
+        "wer": 56.48148148148148,
+        "errors": 122,
+        "nwords": 216,
+        "substitutions": 89,
+        "deletions": 11,
+        "insertions": 22,
+        "n": 24,
+        "utterance_wer_median": 66.66666666666667,
+        "over100": 4
+      },
+      "baseline": {
+        "snr": 7.795486369223307,
+        "stoi": 0.7590863804496495,
+        "wer": 50.46296296296296,
+        "errors": 109,
+        "nwords": 216,
+        "substitutions": 78,
+        "deletions": 19,
+        "insertions": 12,
+        "n": 24,
+        "utterance_wer_median": 66.66666666666667,
+        "over100": 3
+      },
+      "selected": {
+        "snr": 6.959821407707028,
+        "stoi": 0.7637175544114072,
+        "wer": 49.53703703703704,
+        "errors": 107,
+        "nwords": 216,
+        "substitutions": 76,
+        "deletions": 18,
+        "insertions": 13,
+        "n": 24,
+        "utterance_wer_median": 66.66666666666667,
+        "over100": 3
+      },
+      "oracle": {
+        "snr": 8.022960138906903,
+        "stoi": 0.7600895991515345,
+        "wer": 55.092592592592595,
+        "errors": 119,
+        "nwords": 216,
+        "substitutions": 81,
+        "deletions": 16,
+        "insertions": 22,
+        "n": 24,
+        "utterance_wer_median": 66.66666666666667,
+        "over100": 4
+      }
+    },
+    "2094": {
+      "noisy": {
+        "snr": 2.4999999979492684,
+        "stoi": 0.7938581168781699,
+        "wer": 26.19047619047619,
+        "errors": 88,
+        "nwords": 336,
+        "substitutions": 58,
+        "deletions": 23,
+        "insertions": 7,
+        "n": 24,
+        "utterance_wer_median": 18.75,
+        "over100": 0
+      },
+      "baseline": {
+        "snr": 6.873723105269902,
+        "stoi": 0.7994854678040557,
+        "wer": 28.86904761904762,
+        "errors": 97,
+        "nwords": 336,
+        "substitutions": 58,
+        "deletions": 35,
+        "insertions": 4,
+        "n": 24,
+        "utterance_wer_median": 18.75,
+        "over100": 0
+      },
+      "selected": {
+        "snr": 6.2992546861019605,
+        "stoi": 0.802760186663002,
+        "wer": 24.702380952380953,
+        "errors": 83,
+        "nwords": 336,
+        "substitutions": 49,
+        "deletions": 27,
+        "insertions": 7,
+        "n": 24,
+        "utterance_wer_median": 17.708333333333336,
+        "over100": 0
+      },
+      "oracle": {
+        "snr": 7.294481602382727,
+        "stoi": 0.8021185953849974,
+        "wer": 23.511904761904763,
+        "errors": 79,
+        "nwords": 336,
+        "substitutions": 55,
+        "deletions": 19,
+        "insertions": 5,
+        "n": 24,
+        "utterance_wer_median": 10.416666666666668,
+        "over100": 0
+      }
+    }
+  },
+  "metadata": {
+    "n_test_clips": 20,
+    "n_test_speakers": 10
+  },
+  "selected_vs_baseline": {
+    "n": 240,
+    "snr_up": 1,
+    "stoi_up": 170,
+    "wer_down": 79,
+    "wer_up": 30,
+    "wer_ties": 131,
+    "snr_up_wer_worse": 0,
+    "snr_up_stoi_down": 0,
+    "rho_snr_wer": 0.2007132840678213,
+    "rho_stoi_wer": -0.2386291453643176,
+    "ci": {
+      "snr": [
+        -0.7370496325758913,
+        -0.6148072989768674
+      ],
+      "stoi": [
+        0.0023312020489182736,
+        0.004451293540660568
+      ],
+      "wer": [
+        -6.891676278354479,
+        -2.5126068455248394
+      ]
+    },
+    "wer_delta": -4.753309265944645,
+    "speakers_wer_better": 9,
+    "sensitivity": {
+      "removed_id": "1221-135766-0004",
+      "noise": "cafeteria",
+      "snr": -5.0,
+      "delta_without_largest": -4.99092558983666
+    }
+  },
+  "failure_example": {
+    "noisy": {
+      "id": "1188-133604-0010",
+      "speaker_id": 1188,
+      "sex": "M",
+      "split": "test",
+      "noise": "cafeteria",
+      "input_snr": -5.0,
+      "method": "noisy",
+      "snr": -4.999999998025845,
+      "stoi": 0.5288685580523275,
+      "errors": 14,
+      "substitutions": 7,
+      "deletions": 7,
+      "insertions": 0,
+      "nwords": 15,
+      "transcript": "and this is a happy, beautiful, beautiful day.",
+      "reference": "BUT IN THIS VIGNETTE COPIED FROM TURNER YOU HAVE THE TWO PRINCIPLES BROUGHT OUT PERFECTLY",
+      "enhancement_seconds": 0.0001212130000567413,
+      "seed": 15783953630093964921,
+      "noise_start_sample": 3985262,
+      "noise_alpha": 10.908271963979868
+    },
+    "baseline": {
+      "id": "1188-133604-0010",
+      "speaker_id": 1188,
+      "sex": "M",
+      "split": "test",
+      "noise": "cafeteria",
+      "input_snr": -5.0,
+      "method": "baseline",
+      "snr": -1.5325605073884465,
+      "stoi": 0.49378055014217553,
+      "errors": 32,
+      "substitutions": 13,
+      "deletions": 0,
+      "insertions": 19,
+      "nwords": 15,
+      "transcript": "You can open this button, you can open it up and you can pop it in your own  Photoshop, so I don't want to do anything.  I don t want to put it in.",
+      "reference": "BUT IN THIS VIGNETTE COPIED FROM TURNER YOU HAVE THE TWO PRINCIPLES BROUGHT OUT PERFECTLY",
+      "enhancement_seconds": 0.00970429199969658,
+      "seed": 15783953630093964921,
+      "noise_start_sample": 3985262,
+      "noise_alpha": 10.908271963979868
+    },
+    "selected": {
+      "id": "1188-133604-0010",
+      "speaker_id": 1188,
+      "sex": "M",
+      "split": "test",
+      "noise": "cafeteria",
+      "input_snr": -5.0,
+      "method": "selected",
+      "snr": -1.88611032892018,
+      "stoi": 0.5063954482303467,
+      "errors": 14,
+      "substitutions": 8,
+      "deletions": 6,
+      "insertions": 0,
+      "nwords": 15,
+      "transcript": "and this is a very happy, beautiful, beautiful day.",
+      "reference": "BUT IN THIS VIGNETTE COPIED FROM TURNER YOU HAVE THE TWO PRINCIPLES BROUGHT OUT PERFECTLY",
+      "enhancement_seconds": 0.012015398000130517,
+      "seed": 15783953630093964921,
+      "noise_start_sample": 3985262,
+      "noise_alpha": 10.908271963979868
+    },
+    "oracle": {
+      "id": "1188-133604-0010",
+      "speaker_id": 1188,
+      "sex": "M",
+      "split": "test",
+      "noise": "cafeteria",
+      "input_snr": -5.0,
+      "method": "oracle",
+      "snr": -1.2269831994631883,
+      "stoi": 0.4837989218821075,
+      "errors": 28,
+      "substitutions": 13,
+      "deletions": 0,
+      "insertions": 15,
+      "nwords": 15,
+      "transcript": "I hope you guys enjoyed this video.  Thank you very much for watching.  I hope I enjoyed it.  I hope that you enjoyed it and I hope we enjoyed it!",
+      "reference": "BUT IN THIS VIGNETTE COPIED FROM TURNER YOU HAVE THE TWO PRINCIPLES BROUGHT OUT PERFECTLY",
+      "enhancement_seconds": 0.010726716000135639,
+      "seed": 15783953630093964921,
+      "noise_start_sample": 3985262,
+      "noise_alpha": 10.908271963979868
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "model": "Systran/faster-whisper-tiny.en",
+  "model_revision": "0d3d19a32d3338f10357c0889762bd8d64bbdeba",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "decoding": {
+    "language": "en",
+    "beam_size": 1,
+    "temperature": 0,
+    "condition_on_previous_text": false,
+    "vad_filter": false,
+    "no_repeat_ngram_size": 3,
+    "max_new_tokens": 96
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "pystoi": "0.4.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.9.0"
+  },
+  "elapsed_seconds": 586.6751641870001,
+  "selection_and_data": "data/manifest.json; data/sources.json",
+  "stage": "all"
+}
