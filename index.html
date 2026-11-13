@@ -1,19 +1,212 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ELEC5305 | Speech Enhancement vs Speech Recognition</title><style>
-body{font:17px/1.65 system-ui,Arial,sans-serif;color:#19293c;background:#f5f8fb;margin:0} main{max-width:920px;margin:45px auto;padding:34px;background:white;border-radius:16px;box-shadow:0 8px 30px #142b4312}h1{font-size:32px;line-height:1.2}h2{border-bottom:1px solid #d6e0ea;padding-bottom:7px;margin-top:32px}a{color:#1765ad}small,.muted{color:#53677d}.tag{display:inline-block;background:#edf3fb;color:#285781;padding:5px 12px;border-radius:30px;font-weight:600}img{max-width:100%;border:1px solid #dce4eb;border-radius:8px}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){main{margin:0;padding:20px;border-radius:0}.gallery{grid-template-columns:1fr}}code{background:#f1f5f8;padding:2px 4px}
-</style></head><body><main>
-<span class="tag">ELEC5305 · Progress checkpoint · Preliminary</span>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELEC5305 | Speech Enhancement and Recognition</title>
+<style>
+body {
+  margin: 0;
+  background: #f3f6fa;
+  color: #19394b;
+  font: 17px/1.7 Arial, sans-serif;
+}
+main {
+  max-width: 960px;
+  margin: 35px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+}
+h1 { line-height: 1.25; }
+h2 { margin-top: 36px; }
+a { color: #006f8b; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+nav a {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #e8f3f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #dce5ec;
+  text-align: left;
+}
+img, video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 18px 0;
+}
+pre {
+  padding: 16px;
+  overflow-x: auto;
+  background: #f0f4f7;
+  border-radius: 8px;
+}
+.note { color: #526773; }
+@media (max-width: 600px) {
+  main { margin: 0; padding: 20px; }
+  table { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="note">ELEC5305 · Final project</p>
 <h1>Speech Enhancement versus Speech Recognition</h1>
-<p class="muted">Evaluating STFT Wiener Filtering Under Noise | Xinyu Shen · SID 530537427</p>
+<p>Evaluating STFT Wiener Filtering Under Noise</p>
+<p><strong>Xinyu Shen · SID 530137427</strong></p>
+
+<nav>
+  <a href="ELEC5305_Report_Xinyu_Shen%20(3).pdf">
+    Final report (PDF)
+  </a>
+  <a href="ELEC5305_Final_Presentation_Xinyu_Shen%20(1).mp4">
+    Presentation video
+  </a>
+  <a href="audio/">Listen to audio comparisons</a>
+  <a href="https://github.com/xinyu-shen-334/elec5305-project-530537427">
+    Code repository
+  </a>
+</nav>
+
 <h2>Research question</h2>
-<p>Does Wiener filtering that improves the numerical SNR of speech also improve its intelligibility and speech-recognition accuracy? How does imperfect noise-spectrum estimation affect this relationship?</p>
-<h2>Current implementation</h2>
-<p>A reproducible Python prototype includes controlled noise mixing, STFT, spectral noise PSD estimation, Wiener gains, inverse STFT, and visualisation. Two PSD modes are compared: practical (independent noise-only calibration) and oracle (exact added noise). <strong>Figures below are from a synthetic harmonic-signal test, not measured speech-recognition results.</strong></p>
-<div class="gallery"><div><img src="results/waveforms.png" alt="Four synthetic waveforms"><small>Clean, noisy, practical-enhanced and oracle-enhanced signals</small></div><div><img src="results/spectrograms.png" alt="Synthetic signal spectrogram comparisons"><small>Spectrogram comparisons (synthetic test)</small></div></div>
-<h2>Next steps</h2>
-<p>Use transcribed LibriSpeech and DEMAND noise at −5, 0, 5 and 10 dB. Evaluate SNR, STOI and the WER of a fixed pretrained Whisper model, then inspect cases where SNR and WER disagree. No training of Whisper is planned.</p>
-<h2>Code and documents</h2>
-<p><a href="https://github.com/xinyu-shen-334/elec5305-project-530537427">View GitHub repository and reproducibility instructions</a></p>
-<p><small>Status: first DSP demonstration complete; real-speech STOI and WER results have not been collected yet.</small></p>
-</main></body></html>
+<p>
+Does Wiener filtering that improves speech signal-to-noise ratio
+also improve intelligibility and speech-recognition accuracy?
+This project compares SNR, STOI and word error rate (WER),
+including the effects of noise estimation and a gain-floor modification.
+</p>
+
+<h2>Method</h2>
+<p>
+Speech is processed at 16 kHz using a 512-sample Hann STFT
+with a 128-sample hop. The method estimates speech power by
+non-negative spectral subtraction and applies Wiener gains
+with a minimum gain floor, retaining the noisy phase.
+</p>
+<p>
+The baseline floor is 0.05. A floor of 0.35 was selected using
+development-set WER from four candidates: 0.05, 0.10, 0.20 and 0.35.
+A fixed pretrained Whisper tiny.en recognizer measures WER;
+no recognition model is trained.
+</p>
+<p>
+The development set contains four utterances from four speakers.
+The test set contains 20 utterances from 10 different speakers.
+White noise and recorded traffic and cafeteria noise are evaluated
+at −5, 0, 5 and 10 dB, giving 240 test mixtures.
+Recorded noise uses separate development and test time segments.
+</p>
+
+<h2>Test results</h2>
+<p>
+SNR and STOI are averages across the test mixtures.
+WER is pooled across their reference words.
+</p>
+<table>
+<thead>
+<tr>
+  <th>Condition</th>
+  <th>SNR (dB)</th>
+  <th>STOI</th>
+  <th>WER (%) ↓</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Noisy input</td><td>2.50</td><td>0.7945</td><td>28.28</td></tr>
+<tr><td>Baseline floor 0.05</td><td>7.24</td><td>0.7984</td><td>29.90</td></tr>
+<tr><td>Selected floor 0.35</td><td>6.56</td><td>0.8019</td><td>25.15</td></tr>
+<tr><td>Oracle noise PSD</td><td>7.44</td><td>0.8003</td><td>30.39</td></tr>
+</tbody>
+</table>
+
+<h2>Discussion</h2>
+<p>
+Higher SNR does not guarantee lower WER. The baseline increases
+average SNR but has higher pooled WER than the noisy input.
+The selected floor produces lower SNR than the baseline,
+but lower WER and slightly higher STOI.
+</p>
+<p>
+The aggregate WER improvement is driven by white noise.
+For recorded traffic and cafeteria noise, selected-filter WER
+remains slightly worse than the unprocessed input.
+The small test set and reuse of noise recordings across separate
+time segments limit generalisation. The oracle is a diagnostic
+reference using actual noise information, not a practical system.
+</p>
+
+<h2>Results figures</h2>
+<img src="results/performance_curves.png"
+     alt="SNR, STOI and recognition performance across input SNR">
+<img src="results/wer_by_environment.png"
+     alt="Word error rate by noise environment">
+<img src="results/paired_relationships.png"
+     alt="Paired relationships between enhancement metrics">
+
+<h2>Audio demonstrations</h2>
+<p>
+<a href="audio/">Open the four audio comparison examples</a>.
+Each example includes clean, noisy, baseline, selected and oracle audio.
+Versions within an example share one gain for fair listening.
+</p>
+
+<h2>Presentation and code demonstration</h2>
+<video controls preload="metadata">
+  <source
+    src="ELEC5305_Final_Presentation_Xinyu_Shen%20(1).mp4"
+    type="video/mp4">
+  Your browser does not support embedded video.
+</video>
+<p>
+<a href="ELEC5305_Final_Presentation_Xinyu_Shen%20(1).mp4">
+  Open or download the presentation video
+</a>
+</p>
+
+<h2>Code and reproducibility</h2>
+<p>
+Download the repository, install the dependencies and inspect
+the available command-line options from the repository root:
+</p>
+<pre>python -m pip install -r requirements.txt
+python src/experiment.py --help
+python src/analyse.py --help
+python src/make_audio.py --help
+python src/demo.py --help</pre>
+<p>
+The commands above install dependencies and display usage;
+they do not run the full experiment.
+</p>
+<ul>
+  <li><a href="https://github.com/xinyu-shen-334/elec5305-project-530537427/tree/main/src">Python source code</a></li>
+  <li><a href="https://github.com/xinyu-shen-334/elec5305-project-530537427/tree/main/data">Input data and source information</a></li>
+  <li><a href="https://github.com/xinyu-shen-334/elec5305-project-530537427/tree/main/results">Measurements, metadata and figures</a></li>
+  <li><a href="results/demo_execution.txt">Recorded code demonstration output</a></li>
+  <li><a href="ELEC5305_Report_Xinyu_Shen%20(3).pdf">Full report, references and detailed methodology</a></li>
+</ul>
+
+<h2>Sources and acknowledgement</h2>
+<p>
+Speech: LibriSpeech (CC BY 4.0).
+Recorded noise: DEMAND (CC BY-SA 3.0).
+See the report and data source records for attribution and details.
+AI assistance was used in code and writing preparation;
+the report documents the methodology and limitations.
+</p>
+</main>
+</body>
+</html>
