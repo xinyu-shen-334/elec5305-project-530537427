@@ -1,97 +1,190 @@
-# Speech Enhancement versus Speech Recognition: Evaluating STFT Wiener Filtering Under Noise
+# Speech Enhancement versus Speech Recognition
+## Evaluating STFT Wiener Filtering Under Noise
 
-**ELEC5305 progress submission — Xinyu Shen (SID 530537427)**
+**ELEC5305 Final Project — Xinyu Shen | SID 530137427**
 
-**GitHub Pages:** https://xinyu-shen-334.github.io/elec5305-project-530537427/  
-**GitHub Repository:** https://github.com/xinyu-shen-334/elec5305-project-530537427
+## Project links
 
-## Revised research question
+- [Project website](https://xinyu-shen-334.github.io/elec5305-project-530537427/)
+- [Final report](<ELEC5305_Report_Xinyu_Shen (3).pdf>)
+- [Final presentation video](<ELEC5305_Final_Presentation_Xinyu_Shen (1).mp4>)
+- [Audio listening page](https://xinyu-shen-334.github.io/elec5305-project-530537427/audio/)
+- [Source code](src/)
+- [Experimental results](results/)
 
-Does STFT Wiener filtering improve intelligibility and automatic speech recognition as consistently as it improves waveform SNR under different noise environments? To what extent does performance depend on noise PSD estimation accuracy?
+## Research question
 
-## Why this is meaningful
+Does STFT Wiener filtering improve speech intelligibility and
+recognition accuracy as consistently as it improves waveform SNR?
+How do noise estimation and the minimum gain floor affect these outcomes?
 
-Denoising and speech recognition are different objectives: suppression of weak spectral components may remove useful phonetic features. We will compare input/output SNR, objective intelligibility (STOI), and Whisper word error rate (WER) on exactly the same audio. A positive SNR change is not assumed to mean a positive change in recognition accuracy.
+## Method
 
-## Work completed for this progress checkpoint
+The system uses 16 kHz audio, a 512-sample Hann STFT and a
+128-sample hop. Speech power is estimated by non-negative spectral
+subtraction. Wiener gains are applied with a minimum floor,
+while retaining the noisy phase.
 
-- Python STFT / inverse-STFT with a 16 kHz sample rate, Hann window, 512-point FFT and 128-sample hop.
-- Controlled additive noise mixing at user-selected input SNR.
-- Explicit Wiener gain using the mixture spectrum and a noise PSD estimate, with a gain floor of 0.05.
-- **Practical noise PSD** estimated from an independent noise-only calibration segment, and **oracle PSD** estimated using the exact additive noise as an experimental control.
-- Reconstruction, audio export, waveform / spectrogram / Wiener-gain figures and waveform-error SNR measurements.
-- Reproducible *synthetic* demonstration (seed 5305) requiring no downloaded datasets. This verifies the pipeline but **is not real-speech evidence**.
+The baseline floor is 0.05. Four candidates were evaluated on the
+development set: 0.05, 0.10, 0.20 and 0.35.
+The selected floor, 0.35, was frozen before final-test evaluation.
 
-**Not yet completed:** Librispeech/DEMAND experimental results, speech-based STOI metrics, Whisper transcription, WER and correlation analysis. The code and plots in `results/` must not be represented as human-speech recognition results. A practical PSD from a calibration segment is still simplified, and can be inaccurate for time-varying noise.
+A fixed pretrained Whisper tiny.en recognizer measures word error
+rate (WER). No recognition model is trained.
+SNR and STOI measure signal quality and objective intelligibility.
 
-## Folder structure
+## Experimental design
 
-```text
-README.md                       project, methods, limitations and next steps
-index.html                      GitHub Pages project status (optional home page)
-PROGRESS_SUBMISSION.txt         short text for the course submission box
-requirements.txt                minimal Python dependencies
-src/wiener_experiment.py        fully reproducible DSP experiment
-results/*.png                   generated synthetic test plots
-results/*.wav                   generated synthetic test audio
-results/demo_metrics.txt        preliminary synthetic SNR figures
+- Development: 4 speech clips from 4 speakers, 48 mixtures.
+- Test: 20 speech clips from 10 disjoint speakers, 240 mixtures.
+- Test speakers: 5 female and 5 male, 2 clips per speaker.
+- Speech source: LibriSpeech test-clean.
+- Noise: white Gaussian, DEMAND traffic and DEMAND cafeteria.
+- Input SNR: −5, 0, 5 and 10 dB.
+- Recorded-noise development interval: 0–60 seconds.
+- Recorded-noise test interval: 120–300 seconds.
+
+The project development and test speech subsets both come from
+LibriSpeech test-clean; they are not the official benchmark partitions.
+Selection uses speaker IDs, sex and clip duration, not recognition scores.
+
+Noise-only calibration immediately precedes the noise added to speech.
+The intervals do not overlap and use the same mixing scale.
+The study does not claim evaluation on unseen noise recordings.
+
+## Final test results
+
+SNR and STOI are averaged across mixtures.
+WER is pooled across reference words.
+
+| Condition | SNR (dB) | STOI | WER (%) |
+|---|---:|---:|---:|
+| Noisy input | 2.50 | 0.7945 | 28.28 |
+| Baseline floor 0.05 | 7.24 | 0.7984 | 29.90 |
+| Selected floor 0.35 | 6.56 | 0.8019 | 25.15 |
+| Oracle noise PSD | 7.44 | 0.8003 | 30.39 |
+
+Higher SNR does not guarantee lower WER. The selected filter has
+lower SNR than the baseline but lower recognition error.
+
+The aggregate WER improvement is driven by white noise.
+For recorded traffic and cafeteria noise, the selected filter
+remains slightly worse than the noisy input.
+The oracle uses actual noise information and is a diagnostic reference.
+
+See the report for detailed results, speaker-level analysis,
+uncertainty estimates and limitations.
+
+## Installation and execution
+
+Download or clone this repository and open a terminal in its root folder.
+Use Python 3.12 and a virtual environment.
+
+Create the environment:
+
+```sh
+python -m venv .venv
 ```
 
-## Installation and running
+Activate it on Windows:
 
-Python 3.10+ recommended.
-
-```powershell
-py -3 -m venv .venv
+```sh
 .venv\Scripts\activate
-pip install -r requirements.txt
-python src/wiener_experiment.py --output results
 ```
 
-Run with your own real WAV files (clean speech + environmental noise):
+Or activate it on macOS/Linux:
 
-```powershell
-python src/wiener_experiment.py --clean data/clean.wav --noise data/noise.wav --snr 0 --output results/real_test
+```sh
+source .venv/bin/activate
 ```
 
-The WAV files can be mono or stereo (stereo is averaged to mono) and are resampled to 16 kHz. Do not upload large third-party datasets to GitHub. Experimental results depend on the chosen data and are not guaranteed to improve.
+Install dependencies:
 
-## Mathematical implementation
+```sh
+python -m pip install -r requirements.txt
+```
 
-Mixture: `y[n] = s[n] + v[n]`. The STFT gives `Y(k,m)`. The noise PSD `P_v(k)` is calculated from a set of noise-only frames; the estimated speech PSD is `max(|Y(k,m)|² - P_v(k), 0)`. The Wiener gain is:
+Run the quick DSP demonstration:
 
-`G(k,m) = max(0.05, P_s(k,m) / (P_s(k,m) + P_v(k) + eps))`.
+```sh
+python src/demo.py
+```
 
-The filtered STFT is `X_hat(k,m) = G(k,m)Y(k,m)`, using noisy phase; inverse STFT reconstructs the waveform. Input/output SNR use the clean reference and waveform difference. **Oracle** noise PSD is computed from the exact added noise. **Practical** noise PSD uses another calibration segment from the same noise recording and therefore has imperfect finite-sample statistics.
+Run the experiment, analysis and audio export:
 
-## Next research milestones
+```sh
+python src/experiment.py
+python src/analyse.py
+python src/make_audio.py
+```
 
-1. Select 20–50 transcribed LibriSpeech `dev-clean` utterances and establish baseline Whisper WER, keeping model and decoding settings fixed.
-2. Choose three contrasting DEMAND environmental noise recordings and mix at **−5, 0, +5, +10 dB**.
-3. For clean, noisy, practically enhanced and oracle-enhanced audio, compute SNR and STOI; run the same pretrained Whisper recogniser, normalize transcripts, and calculate WER.
-4. Aggregate by noise type, SNR and estimator; plot SNR/STOI change versus WER change and investigate cases where higher SNR does not improve WER.
-5. Examine Wiener gain maps and selected clean/noisy/enhanced log-Mel representations to interpret the results.
+Input speech and noise files are in data/.
+The first recognition run downloads the pretrained tiny.en model.
+No GPU or model training is required.
+The full experiment takes longer than the quick DSP demonstration.
 
-No training or fine-tuning of Whisper is needed; the learned model is a fixed evaluation instrument, not the DSP implementation.
+Run settings and package versions are recorded in
+results/run_metadata.json.
 
-## Data and resources
+The experiment can resume existing JSONL records.
+For a fresh reproduction, back up results/ first and remove any
+development_records.jsonl and test_records.jsonl files before running.
+Use a separate output directory when changing experimental settings.
 
-- [LibriSpeech speech corpus](https://www.openslr.org/12)
-- [DEMAND environmental noise](https://zenodo.org/records/1227121)
-- [Whisper pretrained recogniser](https://github.com/openai/whisper)
-- [pystoi metric](https://github.com/mpariente/pystoi)
-- [JiWER WER metric](https://github.com/jitsi/jiwer)
+## Repository contents
 
-## Related literature
+- src/experiment.py — DSP processing and fixed ASR evaluation.
+- src/analyse.py — statistical analysis and result figures.
+- src/make_audio.py — audio exports and acoustic figures.
+- src/demo.py — quick DSP demonstration.
+- data/clean/ — input speech clips.
+- data/noise/ — recorded noise files.
+- data/manifest.json — clip IDs, transcripts and split membership.
+- data/sources.json — data sources, hashes and selection rules.
+- results/ — measurements, metadata, summaries and figures.
+- audio/ — listening page and four groups of comparison audio.
+- index.html — final project homepage.
+- requirements.txt — Python dependencies.
 
-1. Lim, J. S., & Oppenheim, A. V. (1979). Enhancement and bandwidth compression of noisy speech. *Proceedings of the IEEE*, 67(12), 1586–1604.
-2. Ephraim, Y., & Malah, D. (1984). Speech enhancement using a minimum mean-square error short-time spectral amplitude estimator. *IEEE Transactions on Acoustics, Speech, and Signal Processing*, 32(6), 1109–1121.
-3. Boll, S. (1979). Suppression of acoustic noise in speech using spectral subtraction. *IEEE Transactions on Acoustics, Speech, and Signal Processing*, 27(2), 113–120.
-4. Taal, C. H., Hendriks, R. C., Heusdens, R., & Jensen, J. (2011). An algorithm for intelligibility prediction of time-frequency weighted noisy speech. *IEEE Transactions on Audio, Speech, and Language Processing*, 19(7), 2125–2136.
-5. Panayotov, V., Chen, G., Povey, D., & Khudanpur, S. (2015). LibriSpeech: An ASR corpus based on public domain audio books. *ICASSP*, 5206–5210.
-6. Thiemann, J., Ito, N., & Vincent, E. (2013). The diverse environments multi-channel acoustic noise database (DEMAND). *Meetings on Acoustics*, 19, 035081.
-7. Radford, A., Kim, J. W., Xu, T., Brockman, G., McLeavey, C., & Sutskever, I. (2023). Robust speech recognition via large-scale weak supervision. *ICML*, 28492–28518.
+The report and presentation are linked at the top of this README.
+Earlier proposal and progress files are retained as historical material.
 
-## Submission status
+## Listening instructions
 
-**Initial DSP implementation and demonstrations complete.** Real-speech and downstream-ASR research are planned and not yet claimed as completed. These are early progress materials for teaching feedback, not a final report.
+Open the audio listening page linked above.
+
+Each comparison plays:
+clean → noisy → baseline → selected,
+with one-second gaps.
+
+All versions within an example share the same gain.
+Keep your playback volume fixed when comparing them.
+The four examples were selected by ID, not by best improvement.
+The selected floor targets development WER, not listener preference.
+
+Some uploaded audio filenames contain download-generated suffixes.
+The listening page maps to those uploaded names.
+Running make_audio.py regenerates audio using the original filenames;
+the listening-page paths must match whichever filenames are deployed.
+
+## Data attribution
+
+Speech:
+Panayotov et al. (2015), LibriSpeech, CC BY 4.0.
+https://www.openslr.org/12
+
+Recorded noise:
+Thiemann, Ito and Vincent (2013), DEMAND, CC BY-SA 3.0.
+https://zenodo.org/records/1227121
+
+Original files retain their source licenses.
+Generated mixtures and processed examples are provided under
+CC BY-SA 3.0 with both source attributions.
+Processing changes are described in the report.
+No third-party model weights are redistributed.
+
+## AI assistance acknowledgement
+
+Generative AI assisted code, analysis and report preparation.
+Numerical findings come from executed experiments.
+The final presentation uses student-provided narration.
