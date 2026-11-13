@@ -1,0 +1,28 @@
+{
+  "speech_archive_url": "https://www.openslr.org/resources/12/test-clean.tar.gz",
+  "speech_archive_sha256": "39fde525e59672dc6d1551919b1478f724438a95aa55f874b576be21967e6c23",
+  "speech_license": "CC BY 4.0",
+  "noise_source": "https://zenodo.org/records/1227121",
+  "noise_license": "CC BY-SA 3.0",
+  "noise_files": [
+    {
+      "name": "STRAFFIC",
+      "archive": "STRAFFIC_16k.zip",
+      "member": "STRAFFIC/ch01.wav",
+      "archive_md5": "2efa87262f272bbf9ba578088e81939c",
+      "sha256": "8fa49dcf3996af655a3ecef8d06f0d9ef217c35410e3adce3d461da797987dbb",
+      "seconds": 300.004,
+      "samplerate": 16000
+    },
+    {
+      "name": "PCAFETER",
+      "archive": "PCAFETER_16k.zip",
+      "member": "PCAFETER/ch01.wav",
+      "archive_md5": "99927d148128254141a9417d051510bb",
+      "sha256": "854dd0e5ef334a66abdd02d6d2b3e9d01b685df033d0acd1cd06e471c062550b",
+      "seconds": 300.004,
+      "samplerate": 16000
+    }
+  ],
+  "selection": "For each sex choose first 7 numeric speaker IDs with 2 lexicographically first clips of duration 3-8s; first 2 speakers development (1 clip each), next 5 test (2 clips each)."
+}

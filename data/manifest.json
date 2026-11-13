@@ -1,0 +1,242 @@
+[
+  {
+    "id": "121-121726-0001",
+    "speaker_id": 121,
+    "sex": "F",
+    "split": "development",
+    "seconds": 5.925,
+    "text": "HARANGUE THE TIRESOME PRODUCT OF A TIRELESS TONGUE",
+    "file": "data/clean/121-121726-0001.flac",
+    "sha256": "4d4459266056fcd052ced71563e093ecf74a420abfa3a402283fb6b8eb848441"
+  },
+  {
+    "id": "237-126133-0003",
+    "speaker_id": 237,
+    "sex": "F",
+    "split": "development",
+    "seconds": 6.56,
+    "text": "SOMEHOW OF ALL THE DAYS WHEN THE HOME FEELING WAS THE STRONGEST THIS DAY IT SEEMED AS IF SHE COULD BEAR IT NO LONGER",
+    "file": "data/clean/237-126133-0003.flac",
+    "sha256": "18c38673f71d4012a9c023d7548bff3c0f78172415f67c69abf403590c4e84bc"
+  },
+  {
+    "id": "1221-135766-0002",
+    "speaker_id": 1221,
+    "sex": "F",
+    "split": "test",
+    "seconds": 4.825,
+    "text": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+    "file": "data/clean/1221-135766-0002.flac",
+    "sha256": "1f02bae046f9567010f0163e8f204612fd1035a751383586a7aef6cb0fcc6e60"
+  },
+  {
+    "id": "1221-135766-0004",
+    "speaker_id": 1221,
+    "sex": "F",
+    "split": "test",
+    "seconds": 7.44,
+    "text": "THIS OUTWARD MUTABILITY INDICATED AND DID NOT MORE THAN FAIRLY EXPRESS THE VARIOUS PROPERTIES OF HER INNER LIFE",
+    "file": "data/clean/1221-135766-0004.flac",
+    "sha256": "0c9ef992cd12b597219de360d086cd1638170c61640049fd3ebcb21918bf1009"
+  },
+  {
+    "id": "1284-1180-0001",
+    "speaker_id": 1284,
+    "sex": "F",
+    "split": "test",
+    "seconds": 7.755,
+    "text": "HIS HAT HAD A PEAKED CROWN AND A FLAT BRIM AND AROUND THE BRIM WAS A ROW OF TINY GOLDEN BELLS THAT TINKLED WHEN HE MOVED",
+    "file": "data/clean/1284-1180-0001.flac",
+    "sha256": "b44a1ad458675ba4d8d4dd6d4529d40fbc6fc63d27afce7877dc2024592b5414"
+  },
+  {
+    "id": "1284-1180-0002",
+    "speaker_id": 1284,
+    "sex": "F",
+    "split": "test",
+    "seconds": 7.68,
+    "text": "INSTEAD OF SHOES THE OLD MAN WORE BOOTS WITH TURNOVER TOPS AND HIS BLUE COAT HAD WIDE CUFFS OF GOLD BRAID",
+    "file": "data/clean/1284-1180-0002.flac",
+    "sha256": "d63c23000041a12d901979f70ea981048d509b37bbcfbf176f92089ce13c0c5b"
+  },
+  {
+    "id": "1580-141083-0002",
+    "speaker_id": 1580,
+    "sex": "F",
+    "split": "test",
+    "seconds": 6.135,
+    "text": "MY FRIEND'S TEMPER HAD NOT IMPROVED SINCE HE HAD BEEN DEPRIVED OF THE CONGENIAL SURROUNDINGS OF BAKER STREET",
+    "file": "data/clean/1580-141083-0002.flac",
+    "sha256": "0c6462db43bf4400eb14dd29f67b5077013e4705a7ca72a77a8075ff041bd6cb"
+  },
+  {
+    "id": "1580-141083-0003",
+    "speaker_id": 1580,
+    "sex": "F",
+    "split": "test",
+    "seconds": 6.55,
+    "text": "WITHOUT HIS SCRAPBOOKS HIS CHEMICALS AND HIS HOMELY UNTIDINESS HE WAS AN UNCOMFORTABLE MAN",
+    "file": "data/clean/1580-141083-0003.flac",
+    "sha256": "cf85e23cde64fbc080a6c713a0a9d5bc047092f2365b59fe11437dacec7e0985"
+  },
+  {
+    "id": "1995-1826-0002",
+    "speaker_id": 1995,
+    "sex": "F",
+    "split": "test",
+    "seconds": 4.605,
+    "text": "JOHN TAYLOR WHO HAD SUPPORTED HER THROUGH COLLEGE WAS INTERESTED IN COTTON",
+    "file": "data/clean/1995-1826-0002.flac",
+    "sha256": "e40ad1d69a0f4bf941cd58cbb04a347e05d8a5571cef8bfcf6b16a0781db9e41"
+  },
+  {
+    "id": "1995-1826-0003",
+    "speaker_id": 1995,
+    "sex": "F",
+    "split": "test",
+    "seconds": 3.09,
+    "text": "BETTER GO HE HAD COUNSELLED SENTENTIOUSLY",
+    "file": "data/clean/1995-1826-0003.flac",
+    "sha256": "dcdd947d0f230e0e2a96fbb0501c185d6c262739c140c7f600939f58e606c8fb"
+  },
+  {
+    "id": "2094-142345-0018",
+    "speaker_id": 2094,
+    "sex": "F",
+    "split": "test",
+    "seconds": 3.155,
+    "text": "WHO TAUGHT YOU TO SCRUB A FLOOR I SHOULD LIKE TO KNOW",
+    "file": "data/clean/2094-142345-0018.flac",
+    "sha256": "5ca1ee6260f5fd47dc20cc0e394f28848deedb018ae53319a40bdb7728275487"
+  },
+  {
+    "id": "2094-142345-0021",
+    "speaker_id": 2094,
+    "sex": "F",
+    "split": "test",
+    "seconds": 5.335,
+    "text": "THAT'S THE WAY WITH YOU THAT'S THE ROAD YOU'D ALL LIKE TO GO HEADLONGS TO RUIN",
+    "file": "data/clean/2094-142345-0021.flac",
+    "sha256": "95f5b00de775804cdcaf84013a64497ef3a1e151533787b82157b1e43cec1ecc"
+  },
+  {
+    "id": "61-70968-0000",
+    "speaker_id": 61,
+    "sex": "M",
+    "split": "development",
+    "seconds": 4.905,
+    "text": "HE BEGAN A CONFUSED COMPLAINT AGAINST THE WIZARD WHO HAD VANISHED BEHIND THE CURTAIN ON THE LEFT",
+    "file": "data/clean/61-70968-0000.flac",
+    "sha256": "fd3c84146d8b357efc7f0d21de86de770721fc5ddac7e6577688dbf3cdabff5b"
+  },
+  {
+    "id": "260-123286-0000",
+    "speaker_id": 260,
+    "sex": "M",
+    "split": "development",
+    "seconds": 7.04,
+    "text": "SATURDAY AUGUST FIFTEENTH THE SEA UNBROKEN ALL ROUND NO LAND IN SIGHT",
+    "file": "data/clean/260-123286-0000.flac",
+    "sha256": "d654a43d06f0e8b586b525e8ec83d6e3c0dc83c3f4742f8e25fd291db77248b3"
+  },
+  {
+    "id": "672-122797-0000",
+    "speaker_id": 672,
+    "sex": "M",
+    "split": "test",
+    "seconds": 4.07,
+    "text": "OUT IN THE WOODS STOOD A NICE LITTLE FIR TREE",
+    "file": "data/clean/672-122797-0000.flac",
+    "sha256": "776b1ce553e7ecb2dc0254b2aa4b35af0bde50db65dbf7bdbdfa1560a2c9ec36"
+  },
+  {
+    "id": "672-122797-0003",
+    "speaker_id": 672,
+    "sex": "M",
+    "split": "test",
+    "seconds": 4.76,
+    "text": "BUT THIS WAS WHAT THE TREE COULD NOT BEAR TO HEAR",
+    "file": "data/clean/672-122797-0003.flac",
+    "sha256": "b00cbf4705fcd94f9ea9130da79993f83b7e3a83313328314b3492d19295af94"
+  },
+  {
+    "id": "908-157963-0003",
+    "speaker_id": 908,
+    "sex": "M",
+    "split": "test",
+    "seconds": 3.08,
+    "text": "WHY FADE THESE CHILDREN OF THE SPRING",
+    "file": "data/clean/908-157963-0003.flac",
+    "sha256": "dd5892dd62e1d390e4e5b9ce18613e127e6dd2825f22211d3faf8b069f882f71"
+  },
+  {
+    "id": "908-157963-0005",
+    "speaker_id": 908,
+    "sex": "M",
+    "split": "test",
+    "seconds": 7.035,
+    "text": "LIKE THE DOVES VOICE LIKE TRANSIENT DAY LIKE MUSIC IN THE AIR AH",
+    "file": "data/clean/908-157963-0005.flac",
+    "sha256": "82f60bcb9b1368b5d395895b738cb7aa9a9b9f100b1b315c3478f51c91bb5b21"
+  },
+  {
+    "id": "1089-134686-0001",
+    "speaker_id": 1089,
+    "sex": "M",
+    "split": "test",
+    "seconds": 3.275,
+    "text": "STUFF IT INTO YOU HIS BELLY COUNSELLED HIM",
+    "file": "data/clean/1089-134686-0001.flac",
+    "sha256": "3fc09ec6d4cc496c530b2019b17bd8fc8ef8a43d6697090971dd1d52cc3d4d89"
+  },
+  {
+    "id": "1089-134686-0002",
+    "speaker_id": 1089,
+    "sex": "M",
+    "split": "test",
+    "seconds": 6.625,
+    "text": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+    "file": "data/clean/1089-134686-0002.flac",
+    "sha256": "66277a3fa3df407261dc2a3ce685a7ceef19999ab0c10531bee5257cb64cb59d"
+  },
+  {
+    "id": "1188-133604-0010",
+    "speaker_id": 1188,
+    "sex": "M",
+    "split": "test",
+    "seconds": 6.095,
+    "text": "BUT IN THIS VIGNETTE COPIED FROM TURNER YOU HAVE THE TWO PRINCIPLES BROUGHT OUT PERFECTLY",
+    "file": "data/clean/1188-133604-0010.flac",
+    "sha256": "22bda5e7b49d6964cb7cd63a32887eb2a06e537ff89f5130211bfabd10ea6b5b"
+  },
+  {
+    "id": "1188-133604-0013",
+    "speaker_id": 1188,
+    "sex": "M",
+    "split": "test",
+    "seconds": 3.02,
+    "text": "IT MUST REMEMBER BE ONE OR THE OTHER",
+    "file": "data/clean/1188-133604-0013.flac",
+    "sha256": "5febd6b89261544bc20d3083f67dd0db777ed2bf37a807865cf82accaedc65c4"
+  },
+  {
+    "id": "1320-122612-0002",
+    "speaker_id": 1320,
+    "sex": "M",
+    "split": "test",
+    "seconds": 7.46,
+    "text": "AFTER PROCEEDING A FEW MILES THE PROGRESS OF HAWKEYE WHO LED THE ADVANCE BECAME MORE DELIBERATE AND WATCHFUL",
+    "file": "data/clean/1320-122612-0002.flac",
+    "sha256": "bcf8ec844960246ee63b0c22e95beef40dfc0b6e5efae89ac7a0d78e5afe0c9b"
+  },
+  {
+    "id": "1320-122612-0004",
+    "speaker_id": 1320,
+    "sex": "M",
+    "split": "test",
+    "seconds": 6.425,
+    "text": "DISTRUSTING HIS OWN JUDGMENT HIS APPEALS TO THE OPINION OF CHINGACHGOOK WERE FREQUENT AND EARNEST",
+    "file": "data/clean/1320-122612-0004.flac",
+    "sha256": "8d9a1195950140b1799204ed5d21577708d2398a0e7b3b5936dace5b03c66139"
+  }
+]
